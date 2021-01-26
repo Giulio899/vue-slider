@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../img/sfondo.jpg');
+  font-size: 16px;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container {
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container .img-container {
+  width: 760px;
+  height: 420px;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-container .img-container .fa-caret-square-right,
+.slider-container .img-container .fa-caret-square-left {
+  font-size: 3em;
+  color: #ff7369;
+  cursor: pointer;
+}
+
+.slider-container .img-container .fa-caret-square-right {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+}
+
+.slider-container .img-container .fa-caret-square-left {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+}
+
+.slider-container .img-container .fa-caret-square-right:hover,
+.slider-container .img-container .fa-caret-square-left:hover {
+  color: #ff4574;
+  transition: .5s;
+}
+
+.slider-container .img-container img {
+  width: 100%;
+}
+/*
+.slider-container .img-container img.opacity0 {
+  opacity: 0;
+  transition: .5s;
+}
+
+.slider-container .img-container img.opacity1 {
+  opacity: 1;
+  transition: .5s;
+} */
+
+
+.slider-container .fa-circle {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #ff7369;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider-container .fa-circle.active {
+  color: #ff4574;
+}
+
+.slider-container .fa-circle:hover {
+  color: #ff4574;
+  transition: .5s;
+}
