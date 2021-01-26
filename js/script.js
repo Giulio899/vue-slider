@@ -17,19 +17,31 @@ var app = new Vue({
       'Il Re Leone',
       'Il libro della giungla',
       'Peter Pan',
-    ]
+    ],
+    interval: ''
+  },
+  created() {
+    this.interval = setInterval(this.nextPhotoAutomatic, 2000)
   },
     methods: {
+      // ho creato la funzione nextPhotoAutomatic(), che sostanzialmente uguale a nextPhoto(), perché in questo modo in nextPhoto() ho potuto aggiungere il clearTimeout (voglio che cliccando sulla freccia destra lo slider smetta di scorrere automaticamente)
+      nextPhotoAutomatic() {
+        (this.counter == this.imgsSrc.length - 1) ? this.counter = 0 : this.counter++;
+        console.log(this.counter);
+      },
       nextPhoto() {
         (this.counter == this.imgsSrc.length - 1) ? this.counter = 0 : this.counter++;
         console.log(this.counter);
+        clearTimeout(this.interval);
       },
       prevPhoto() {
         (this.counter == 0) ? this.counter = this.imgsSrc.length - 1 : this.counter--;
         console.log(this.counter);
+        clearTimeout(this.interval);
       },
       changePhoto(index) {
         this.counter = index;
+        clearTimeout(this.interval);
       }
     }
 })

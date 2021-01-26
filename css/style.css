@@ -66,16 +66,15 @@ body {
 .slider-container .img-container img {
   width: 100%;
 }
-/*
+
 .slider-container .img-container img.opacity0 {
   opacity: 0;
   transition: .5s;
 }
 
 .slider-container .img-container img.opacity1 {
-  opacity: 1;
   transition: .5s;
-} */
+}
 
 
 .slider-container .fa-circle {
