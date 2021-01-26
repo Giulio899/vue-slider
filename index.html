@@ -21,7 +21,7 @@
 
       <!-- container foto -->
       <div class="img-container">
-        <img :src='imgsSrc[counter]'>
+        <img :src='imgsSrc[counter]' :alt='imgsAlt[counter]'>
         <!-- freccia sinistra -->
         <i class="fas fa-caret-square-left" @click="prevPhoto"></i>
         <!-- freccia destra -->
@@ -30,7 +30,7 @@
 
       <!-- contenitore pallini -->
       <div class="circle-container">
-        <i class="fas fa-circle" :title="index" v-for="(img, index) in imgsSrc" :class="(index == counter) ? 'active' : ''" @click="changePhoto(index)"></i>
+        <i class="fas fa-circle" v-for="(img, index) in imgsSrc" :class="(index == counter) ? 'active' : ''" @click="changePhoto(index)"></i>
 
       </div>
 

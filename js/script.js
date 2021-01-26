@@ -10,6 +10,13 @@ var app = new Vue({
       'img/il-re-leone.jpg',
       'img/libro-giungla.jpg',
       'img/peter-pan.jpg',
+    ],
+    imgsAlt: [
+      'Aladdin',
+      'Dumbo',
+      'Il Re Leone',
+      'Il libro della giungla',
+      'Peter Pan',
     ]
   },
     methods: {
