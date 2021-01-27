@@ -18,7 +18,8 @@ var app = new Vue({
       'Il libro della giungla',
       'Peter Pan',
     ],
-    interval: ''
+    interval: '',
+    keyCode: ''
   },
   created() {
     this.interval = setInterval(this.nextPhotoAutomatic, 2000)
@@ -42,6 +43,19 @@ var app = new Vue({
       changePhoto(index) {
         this.counter = index;
         clearTimeout(this.interval);
+      },
+      changeWithArrow(e) {
+        this.keyCode = e.keyCode;
+        if(this.keyCode == 39) {
+          this.nextPhoto();
+        } else if (this.keyCode == 37) {
+          this.prevPhoto();
+        }
       }
+
     }
-})
+});
+
+window.addEventListener('keydown', function(e) {
+  app.changeWithArrow(e);
+});
